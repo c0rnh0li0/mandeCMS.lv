@@ -21,3 +21,7 @@ Route::resource('posts', 'PostsController');
     return view('welcome');
 });
 */
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
