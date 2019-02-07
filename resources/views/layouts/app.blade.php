@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -30,12 +27,14 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
+    <!-- Scripts -->
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
-        $(function () {
-            $('textarea').ckeditor();
-        });
+        if (document.getElementById('article-ckeditor') != null) {
+            CKEDITOR.replace( 'article-ckeditor' );
+        }
     </script>
 </body>
 </html>
