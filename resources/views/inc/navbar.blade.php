@@ -45,6 +45,9 @@
             @endif
             @else
                 <li class="nav-item dropdown">
+                    <a class="nav-link" href="/vuedashboard">Vue Dashboard</a>
+                </li>
+                <li class="nav-item dropdown">
                     <a class="nav-link" href="/dashboard">Dashboard</a>
                 </li>
                 <li class="nav-item dropdown">

@@ -29,4 +29,12 @@ class DashboardController extends Controller
 
         return view('dashboard')->with('posts', $user->posts);
     }
+
+    public function vuedashboard()
+    {
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
+
+        return view('vuedashboard')->with('posts', $user->posts);
+    }
 }
